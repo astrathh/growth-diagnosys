@@ -1,11 +1,15 @@
+// src/Questionario.js
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import data from '../Model/data';
 import { handleSubmit } from '../Controller/handleSubmit';
+
 
 function Questionario() {
   const [respostas, setRespostas] = useState({});
   const [currentQuestion, setCurrentQuestion] = useState({ temaIndex: 0, perguntaIndex: 0 });
   const [chat, setChat] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (chat.length === 0) {
@@ -20,7 +24,7 @@ function Questionario() {
 
       setChat([novaMensagem]);
     }
-  }, []);
+  }, [chat.length, currentQuestion]);
 
   const handleChange = (temaIndex, perguntaIndex, respostaTexto, valor) => {
     setRespostas(prevRespostas => ({
@@ -59,7 +63,7 @@ function Questionario() {
       setChat(prevChat => [...prevChat, novaMensagemPergunta]);
     } else {
       // Se todas as perguntas foram respondidas, submeter o formulário
-      handleSubmit(null, respostas);
+      handleSubmit(respostas, navigate);
     }
   };
 

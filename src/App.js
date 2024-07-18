@@ -1,15 +1,17 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Questionario from './View/Questionario';
+import Relatorio from './View/Relatório';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Growth Diagnosys</h1>
-        <Questionario />
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" component={Questionario} />
+        <Route path="/relatorio" component={Relatorio} />
+      </Routes>
+    </Router>
   );
 }
 
