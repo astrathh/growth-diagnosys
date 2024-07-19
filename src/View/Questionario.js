@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import data from '../Model/data';
 import { handleSubmit } from '../Controller/handleSubmit';
 
-
 function Questionario() {
   const [respostas, setRespostas] = useState({});
   const [currentQuestion, setCurrentQuestion] = useState({ temaIndex: 0, perguntaIndex: 0 });

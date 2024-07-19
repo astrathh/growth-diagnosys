@@ -5,28 +5,28 @@ const data = [
         {
           pergunta: "Pergunta 1",
           respostas: [
-            { texto: "Resposta 1", valor: 1 },
-            { texto: "Resposta 2", valor: 2 },
-            { texto: "Resposta 3", valor: 3 },
-            { texto: "Resposta 4", valor: 4 }
+            { texto: "Resposta 1", valor: 2.5 },
+            { texto: "Resposta 2", valor: 5 },
+            { texto: "Resposta 3", valor: 7.5 },
+            { texto: "Resposta 4", valor: 10 }
           ]
         },
         {
           pergunta: "Pergunta 2",
           respostas: [
-            { texto: "Resposta 1", valor: 1 },
-            { texto: "Resposta 2", valor: 2 },
-            { texto: "Resposta 3", valor: 3 },
-            { texto: "Resposta 4", valor: 4 }
+            { texto: "Resposta 1", valor: 2.5 },
+            { texto: "Resposta 2", valor: 5 },
+            { texto: "Resposta 3", valor: 7.5 },
+            { texto: "Resposta 4", valor: 10 }
           ]
         },
         {
           pergunta: "Pergunta 3",
           respostas: [
-            { texto: "Resposta 1", valor: 1 },
-            { texto: "Resposta 2", valor: 2 },
-            { texto: "Resposta 3", valor: 3 },
-            { texto: "Resposta 4", valor: 4 }
+            { texto: "Resposta 1", valor: 2.5 },
+            { texto: "Resposta 2", valor: 5 },
+            { texto: "Resposta 3", valor: 7.5 },
+            { texto: "Resposta 4", valor: 10 }
           ]
         }
       ]
@@ -37,28 +37,28 @@ const data = [
         {
           pergunta: "Pergunta 1",
           respostas: [
-            { texto: "Resposta 1", valor: 1 },
-            { texto: "Resposta 2", valor: 2 },
-            { texto: "Resposta 3", valor: 3 },
-            { texto: "Resposta 4", valor: 4 }
+            { texto: "Resposta 1", valor: 2.5 },
+            { texto: "Resposta 2", valor: 5 },
+            { texto: "Resposta 3", valor: 7.5 },
+            { texto: "Resposta 4", valor: 10 }
           ]
         },
         {
           pergunta: "Pergunta 2",
           respostas: [
-            { texto: "Resposta 1", valor: 1 },
-            { texto: "Resposta 2", valor: 2 },
-            { texto: "Resposta 3", valor: 3 },
-            { texto: "Resposta 4", valor: 4 }
+            { texto: "Resposta 1", valor: 2.5 },
+            { texto: "Resposta 2", valor: 5 },
+            { texto: "Resposta 3", valor: 7.5 },
+            { texto: "Resposta 4", valor: 10 }
           ]
         },
         {
           pergunta: "Pergunta 3",
           respostas: [
-            { texto: "Resposta 1", valor: 1 },
-            { texto: "Resposta 2", valor: 2 },
-            { texto: "Resposta 3", valor: 3 },
-            { texto: "Resposta 4", valor: 4 }
+            { texto: "Resposta 1", valor: 2.5 },
+            { texto: "Resposta 2", valor: 5 },
+            { texto: "Resposta 3", valor: 7.5 },
+            { texto: "Resposta 4", valor: 10 }
           ]
         }
       ]

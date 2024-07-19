@@ -1,0 +1,55 @@
+/* Estilização do relatório */
+.report {
+    display: flex;
+    flex-direction: column; /* Organiza os temas em coluna */
+    align-items: center; /* Centraliza os temas horizontalmente */
+    margin: 0 auto; /* Centraliza na tela horizontalmente */
+    width: 80%; /* Ajusta a largura do relatório */
+    padding: 20px; /* Adiciona espaço interno */
+    border-radius: 10px; /* Arredonda os cantos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+/* Estilização dos temas */
+.tema {
+    margin-bottom: 20px; /* Adiciona espaço entre os temas */
+    text-align: center; /* Centraliza o texto do tema */
+}
+
+/* Estilização dos títulos dos temas */
+.tema h2 {
+    font-size: 20px; /* Ajuste o tamanho da fonte */
+    margin-bottom: 10px; /* Adiciona espaço abaixo do título */
+}
+
+/* Estilização da mensagem */
+.message {
+    margin-bottom: 10px; /* Adiciona espaço abaixo da mensagem */
+    font-size: 14px; /* Ajuste o tamanho da fonte da mensagem */
+}
+
+/* Estilização dos círculos de média */
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+/* Estilização das cores dos círculos */
+.low {
+    background-color: red;
+}
+
+.medium {
+    background-color: orange;
+}
+
+.high {
+    background-color: green;
+}
