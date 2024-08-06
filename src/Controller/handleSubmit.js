@@ -1,20 +1,19 @@
+// src/Controller/handleSubmit.js
 import { gerarRelatorio } from '../Model/calculation';
 
 export function handleSubmit(respostas, navigate) {
-  const resultados = Object.keys(respostas).map(key => {
-    const perguntas = Object.keys(respostas[key]).map(perguntaKey => ({
-      [perguntaKey]: respostas[key][perguntaKey]
-    }));
+  const resultados = respostas.map((tema) => {
+    const total = tema.respostas.reduce((soma, valor) => soma + valor, 0);
+    const media = total / tema.respostas.length;
 
     return {
-      tema: `Tema ${parseInt(key) + 1}`,
-      perguntas
+      tema: tema.tema,
+      media: media
     };
   });
 
   const relatorio = gerarRelatorio(resultados);
 
-  // Redirecionar para a página de relatório com o relatório no estado
+  // Redirecionar para a página de relatório com os resultados no estado
   navigate('/relatorio', { state: { relatorio } });
 }
-

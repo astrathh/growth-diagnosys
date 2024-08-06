@@ -1,25 +1,21 @@
-export function calcularMediaTema(tema) {
-  if (!Array.isArray(tema.perguntas)) {
-    console.error('Erro: tema.perguntas não é um array', tema.perguntas);
-    return 0;
-  }
-
-  const total = tema.perguntas.reduce((soma, pergunta) => {
-    const valores = Object.values(pergunta);
-    const mediaPergunta = valores.reduce((somaValor, valor) => somaValor + valor, 0) / valores.length;
-    return soma + mediaPergunta;
-  }, 0);
-
-  return total / tema.perguntas.length;
-}
-
+// src/Model/calculation.js
 export function gerarRelatorio(resultados) {
-  const relatorio = resultados.map(tema => {
+  return resultados.map((resultado) => {
+    const { tema, media } = resultado;
+    let mensagem = '';
+
+    if (media < 5) {
+      mensagem = 'Mensagem para média baixa';
+    } else if (media >= 5 && media < 7) {
+      mensagem = 'Mensagem para média média';
+    } else {
+      mensagem = 'Mensagem para média alta';
+    }
+
     return {
-      tema: tema.tema,
-      media: calcularMediaTema(tema)
+      tema,
+      media,
+      mensagem
     };
   });
-
-  return relatorio;
 }
