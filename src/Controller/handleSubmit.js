@@ -1,19 +1,14 @@
-// src/Controller/handleSubmit.js
+import { calcularMediaTema } from '../Model/calculation';
 import { gerarRelatorio } from '../Model/calculation';
 
 export function handleSubmit(respostas, navigate) {
-  const resultados = respostas.map((tema) => {
-    const total = tema.respostas.reduce((soma, valor) => soma + valor, 0);
-    const media = total / tema.respostas.length;
+  // Calcular médias
+  const medias = calcularMediaTema(respostas);
 
-    return {
-      tema: tema.tema,
-      media: media
-    };
-  });
+  // Gerar relatório com mensagens
+  const relatorio = gerarRelatorio(medias);
 
-  const relatorio = gerarRelatorio(resultados);
-
-  // Redirecionar para a página de relatório com os resultados no estado
-  navigate('/relatorio', { state: { relatorio } });
+  // Redirecionar para a página de relatório com os dados
+  navigate('/relatorio', { state: { resultados: relatorio } });
 }
+

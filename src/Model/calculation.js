@@ -19,3 +19,9 @@ export function gerarRelatorio(resultados) {
     };
   });
 }
+export function calcularMediaTema(respostas) {
+  return respostas.map(tema => {
+    const media = tema.respostas.reduce((acc, val) => acc + val, 0) / tema.respostas.length;
+    return { tema: tema.tema, media };
+  });
+}

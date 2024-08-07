@@ -125,7 +125,7 @@ function Questionario() {
     };
 
     try {
-      const response = await fetch('', {
+      const response = await fetch('URL VEM AQUI', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -159,9 +159,8 @@ function Questionario() {
               className={`flex ${mensagem.tipo === 'pergunta' ? 'justify-start' : 'justify-end'}`}
             >
               <div
-                className={`p-4 max-w-sm rounded-lg shadow ${
-                  mensagem.tipo === 'pergunta' ? 'bg-blue-100' : mensagem.tipo === 'info' ? 'bg-yellow-100' : 'bg-green-200'
-                }`}
+                className={`p-4 max-w-sm rounded-lg shadow ${mensagem.tipo === 'pergunta' ? 'bg-blue-100' : mensagem.tipo === 'info' ? 'bg-yellow-100' : 'bg-green-200'
+                  }`}
               >
                 {mensagem.texto}
               </div>
